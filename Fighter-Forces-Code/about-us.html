@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FFAMW</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --army: #4b5320;
+            --navy: #0a192f;
+            --air: #1e90ff;
+            --secondary: #d4af37; /* Gold */
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
+        }
+
+        .about-hero {
+            position: relative;
+            height: 450px;
+            background: url('assets/pakistan-forces.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(75, 83, 32, 0.75), rgba(10, 25, 47, 0.75));
+        }
+
+        .about-hero h1 {
+            position: relative;
+            font-size: 3.8rem;
+            z-index: 1;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--navy);
+            margin-bottom: 40px;
+            font-size: 2.8rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--navy);
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            border-top: 6px solid var(--navy);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .info-card h2 {
+            color: var(--navy);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-card ul li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.7;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        .info-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .about-details {
+            line-height: 2;
+            color: #2c3e50;
+            font-size: 1.15rem;
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .about-details p {
+            margin-bottom: 30px;
+        }
+
+        .founder-profile {
+            background: linear-gradient(135deg, var(--navy) 0%, #000050 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 25px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .founder-profile h2 {
+            color: var(--secondary);
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .qualifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .qualifications li {
+            list-style: none;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            font-size: 1.05rem;
+            color: #ecf0f1;
+        }
+
+        .core-values {
+            background: #f9fbfb;
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .values-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .value-item {
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            font-weight: 700;
+            color: var(--navy);
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            background: var(--navy);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                height: 300px;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            .content-section {
+                padding: 30px 15px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .vision-mission-grid, .qualifications {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .info-card {
+                padding: 25px;
+            }
+            .founder-profile {
+                padding: 40px 20px;
+                border-radius: 15px;
+            }
+            .founder-profile h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-overlay" onclick="toggleMenu()"></div>
+    <header>
+        <div class="brand">
+            <img src="assets/favicon.ico" alt="FFAMW Logo">
+            <span>Fighter Forces</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation" role="button">☰</div>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="initial-test.html">Initial Test</a></li>
+            <li><a href="medical-test.html">Medical</a></li>
+            <li><a href="physical-test.html">Physical</a></li>
+            <li><a href="ISSB.html">ISSB</a></li>
+            <li><a href="Take-a-test.html" class="take-test">Take Test</a></li>
+            <li><a href="tests/grand-test/login.html" class="take-test">Grand Test</a></li>
+            <li><a href="publication.html">Publications</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </header>
+    <div class="nav-space"></div>
+
+    <section class="about-hero">
+        <h1>About Our Academy</h1>
+    </section>
+
+    <main class="content-section">
+        
+        <div class="about-details">
+            <p>The traditional ways to impart education have fundamentally changed in the 21st century due to modern technology and rapid advancements in science. At Fighter Forces Academy, we believe the old teaching methodologies must be enhanced with the latest sources of multimedia, digital platforms, and audio-visual aids to meet modern standards.</p>
+            
+            <p>The core purpose of this platform is to educate, guide, coach, and motivate students toward a bright future in national service. We are dedicated to assisting candidates in preparing for the rigorous tests, examinations, and interviews required to join the <strong>Defence Forces of Pakistan</strong> or any other Federal/Provincial governmental organization.</p>
+
+            <p>Designed by the administration of <strong>Fighter Forces Academy, Mianwali</strong>, this online portal quenches the intellectual thirst of students who cannot personally visit physical academies. It is especially designed for those who balance studies or private jobs and require a flexible yet disciplined approach to test preparation.</p>
+
+            <p>We empower parents to facilitate their children's preparation from the safety and comfort of their homes. Our specialized modules cover selection tests for the <strong>Pakistan Army, Pakistan Navy, Pakistan Air Force, Merchant Navy, Cadet Colleges,</strong> and various Law Enforcement Agencies across all cadres and ranks.</p>
+        </div>
+
+        <div class="vision-mission-grid">
+            <div class="info-card">
+                <h2>Our Vision</h2>
+                <ul>
+                    <li>To provide elite teaching, motivation, and leadership counseling for every aspirant.</li>
+                    <li>Utilizing cutting-edge digital audio-visual aids for maximum concept clearance.</li>
+                    <li>To serve as a national torch-bearer, preparing our youth as future Military Commanders and Civil Leaders.</li>
+                    <li>Achieving excellence as an internationally acclaimed technology-based preparation institution.</li>
+                </ul>
+            </div>
+            <div class="info-card" style="border-top-color: var(--navy);">
+                <h2>Our Mission</h2>
+                <ul>
+                    <li>Creating the perfect platform to explore and sharpen the hidden qualities of students for the Armed Forces.</li>
+                    <li>Providing target-oriented, comprehensive knowledge for Rangers, FC, and Para-Military Forces through <strong>Fighter Forces Academy</strong>.</li>
+                    <li>Delivering rigorous, relevant, and technology-driven learning experiences.</li>
+                    <li>Making high-quality education accessible through online memberships for students nationwide.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="core-values">
+            <h2 class="section-title">Core Values</h2>
+            <div class="values-list">
+                <div class="value-item">Academic Excellence</div>
+                <div class="value-item">Integrity & Honor</div>
+                <div class="value-item">Professional Leadership</div>
+                <div class="value-item">Collective Excellence</div>
+                <div class="value-item">Social Justice</div>
+                <div class="value-item">Lifelong Learning</div>
+            </div>
+        </div>
+
+        <div class="founder-profile">
+            <h2>Our Instructor's Profile</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.3rem; color: #fff;">
+                Originated and guided by <strong>Muhammad Rizwan Hanif</strong><br>
+                <span style="color: var(--secondary); font-weight: 600;">Lead Instructor & Academy Head</span>
+            </p>
+            <div class="qualifications">
+                <li>Bachelors From University of Sargodha.</li>
+                <li>Mphil from The Superior University Lahore.</li>
+                <li>Specialist in Test Preparation & Career Counseling.</li>
+                <li>Expert in matriculation, F.A/F. Sc & graduation levels.</li>
+                <li>English Language Speaking & Proficiency Specialist.</li>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <p><strong>Email:</strong> fighterforcesacademy@gmail.com</p>
+                    <p><strong>Phone:</strong> +92 306 7022337</p>
+                </div>
+            </div>
+            <div class="footer-col" id="footer-web-links">
+                <h3>Web Links</h3>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policies</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://www.pakistanarmy.gov.pk/" target="_blank">Join Pak Army</a></li>
+                    <li><a href="https://www.joinpaknavy.gov.pk/" target="_blank">Join Pak Navy</a></li>
+                    <li><a href="https://joinpaf.gov.pk/" target="_blank">Join Pak Air Force</a></li>
+                    <li><a href="https://issb.com.pk/" target="_blank">ISSB Official</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Current Posts</h3>
+                <ul>
+                    <li><a href="#">Army Welfare Trust Jobs</a></li>
+                    <li><a href="#">Shaheen Foundation Openings</a></li>
+                    <li><a href="#">PAF Rehabilitation Career</a></li>
+                    <li><a href="#">Fauji Foundation Jobs</a></li>
+                    <li><a href="#">National Job Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            Copyright © 2026 Fighter Forces Academy (FFA)
+            <a href="tests/grand-test/admin.html" class="admin-link">Admin</a>
+        </div>
+    </footer>
+    <script src="js/nav.js"></script>
+</body>
+</html>

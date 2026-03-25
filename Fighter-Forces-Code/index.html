@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFAMW | Home - Pak Army, Navy & Air Force Test Prep</title>
+    <meta name="description"
+        content="Prepare for Pakistan Army, Navy, and Air Force initial tests with Fighter Forces Academy. Free online verbal, non-verbal, and academic practice tests.">
+    <meta name="keywords"
+        content="Pak Army, Pak Navy, Pak Air Force, Join Army, Join Navy, Join Air Force, Initial Test, PMA Long Course, ISSB Preparation, Verbal Test, Non-Verbal Test, Academic Test, Fighter Forces Academy, Online Test, Practice Test">
+    <meta property="og:title" content="FFAMW - Elite Defense Forces Preparation">
+    <meta property="og:description"
+        content="Join Fighter Forces Academy for comprehensive preparation of Army, Navy, and Air Force initial tests.">
+    <meta property="og:image" content="assets/favicon.ico">
+    <meta property="og:url" content="https://ffamw.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="menu-overlay" onclick="toggleMenu()"></div>
+
+    <header>
+        <div class="brand">
+            <img src="assets/favicon.ico" alt="FFAMW Logo">
+            <span>Fighter Forces</span>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation" role="button">☰</div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="initial-test.html">Initial Test</a></li>
+            <li><a href="medical-test.html">Medical</a></li>
+            <li><a href="physical-test.html">Physical</a></li>
+            <li><a href="ISSB.html">ISSB</a></li>
+            <li><a href="Take-a-test.html" class="take-test">Take Test</a></li>
+            <li><a href="tests/grand-test/login.html" class="take-test">Grand Test</a></li>
+            <li><a href="publication.html">Publications</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </header>
+
+    <div class="nav-space"></div>
+
+    <div class="blink-box">
+        Join Pak Army as <span>158 PMA Long Course</span>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqwMwiS93OpQGQ9mWJdGjs3CneQM-UkV8NlkauOZ_lanw89IbI1LBj_1vzyRop3f6nAzsjHS-JlaJRFpX-iSD5BtFRBGvcSoPWUbg95YVrtz0lGfiCbHUG1Ci8dhogBqpuPU8T903Bmv8/s1600/ddd+copy.jpg"
+                class="slide active">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFG5rMNct0fQj63uV5GY4bMTO6PQqpGwFkn0c-WrHUDRIUk0BBykRyZvy3a8-tPZHpIdtTsJVTiLkI4Q-b93eNDm3SUwGrIYAi7UuxN30GLj5ws74HYIuRjKbqETtWJwtSUUROZwmehjo/w640-h206/b7f64177d2831dd463302642fc91c814.jpg"
+                class="slide">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAdMicXQCvISNL9xfapocKf2COvMM7viAKpUDR4tcGYLIFJ8gKEFvyOE7x5me-9zm3Av3dvDpZqa_wrzBBBEYl_QJHB7U19q7grXewyXdSP7QwTin4WtT08cqIBlOYWpkgdF5i4x-YI57GLgDlwQws_t24A53AK6DbChxWUkAT-QfTWUu9o5rj6MkU/s320/Untitled-1ss.jpg"
+                class="slide">
+        </div>
+    </div>
+
+    <!-- AGE & BMI -->
+    <div class="tools">
+        <div class="tool-box">
+            <h3>Age Calculator</h3>
+            <input type="date" id="dob">
+            <button onclick="calcAge()">Calculate Age</button>
+            <p id="ageResult"></p>
+        </div>
+
+        <div class="tool-box">
+            <h3>BMI Calculator</h3>
+            <input type="number" id="height" placeholder="Height (cm)">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <button onclick="calcBMI()">Calculate BMI</button>
+            <p id="bmiResult"></p>
+        </div>
+    </div>
+
+    <!-- RECENT POSTS -->
+    <div class="recent-posts">
+        <h3 style="text-align:center; color:var(--navy); margin-bottom:25px;">
+            Recent Posts
+        </h3>
+
+        <div class="post-grid">
+            <div class="post-box">
+                <h4>ISSB Interview Preparation</h4>
+                <p>Complete guidance for psychological tests, GTO tasks and interview.</p>
+                <a href="#">Read More →</a>
+            </div>
+
+            <div class="post-box">
+                <h4>PMA Long Course Eligibility</h4>
+                <p>Updated age, education and physical standards for PMA candidates.</p>
+                <a href="#">Read More →</a>
+            </div>
+
+            <div class="post-box">
+                <h4>Physical & Medical Standards</h4>
+                <p>Height, weight, BMI and eyesight standards explained clearly.</p>
+                <a href="medical-test.html">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <p><strong>Email:</strong> fighterforcesacademy@gmail.com</p>
+                    <p><strong>Phone:</strong> +92 306 7022337</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Web Links</h3>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policies</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://www.pakistanarmy.gov.pk/" target="_blank">Join Pak Army</a></li>
+                    <li><a href="https://www.joinpaknavy.gov.pk/" target="_blank">Join Pak Navy</a></li>
+                    <li><a href="https://joinpaf.gov.pk/" target="_blank">Join Pak Air Force</a></li>
+                    <li><a href="https://issb.com.pk/" target="_blank">ISSB Official</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Current Posts</h3>
+                <ul>
+                    <li><a href="#">Army Welfare Trust Jobs</a></li>
+                    <li><a href="#">Shaheen Foundation Openings</a></li>
+                    <li><a href="#">PAF Rehabilitation Career</a></li>
+                    <li><a href="#">Fauji Foundation Jobs</a></li>
+                    <li><a href="#">National Job Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            Copyright © 2026 Fighter Forces Academy (FFA)
+            <a href="tests/grand-test/admin.html" class="admin-link">Admin</a>
+        </div>
+    </footer>
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }, 3500);
+
+        /* AGE */
+        function calcAge() {
+            let dob = new Date(document.getElementById("dob").value);
+            let diff = Date.now() - dob.getTime();
+            let age = new Date(diff).getUTCFullYear() - 1970;
+            document.getElementById("ageResult").innerText = "Your Age: " + age + " Years";
+        }
+
+        /* BMI */
+        function calcBMI() {
+            let h = document.getElementById("height").value / 100;
+            let w = document.getElementById("weight").value;
+            let bmi = (w / (h * h)).toFixed(1);
+            let status = bmi < 18.5 ? "Underweight" : bmi < 25 ? "Fit" : "Overweight";
+            document.getElementById("bmiResult").innerText =
+                "BMI: " + bmi + " (" + status + ")";
+        }
+    </script>
+
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
