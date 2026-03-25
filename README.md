@@ -17,7 +17,7 @@ Prepare for a career in the Pakistan Armed Forces with the most comprehensive on
 
 ---
 
-## 🛠️ Repository Structure (Portfolio Version)
+## 🛠️ Repository Structure 
 
 *Note: For security and proprietary reasons, this repository only contains the UI/UX components and a sample module. The full database and core engine are privately hosted.*
 
